@@ -1,11 +1,8 @@
-import axios from "axios";
-import Constants from 'expo-constants'; // Eğer Expo kullanıyorsanız
 
- // Expo için
- const { YELP_API_BASEURL, YELP_API_KEY } = process.env; // Eğer başka bir çözüm kullanıyorsanız
+import axios from "axios";
 
 export default axios.create({
-  baseURL: YELP_API_BASEURL,
-  headers: { Authorization: `Bearer ${YELP_API_KEY}` }
+    baseURL: "https://api.yelp.com/v3/businesses",
+    headers: { 
+        Authorization: "-- " }
 });
-
