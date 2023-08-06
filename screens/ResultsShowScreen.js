@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View ,Image, FlatList} from 'react-native'
+import { StyleSheet, Text, View ,Image, FlatList, ScrollView} from 'react-native'
 import React, { useEffect, useState } from 'react'
 import data from '../api/data';
 import { AntDesign } from '@expo/vector-icons'; 
@@ -20,6 +20,7 @@ export default function ResultsShowScreen({route}) {
     return null;
   }
   return (
+    <ScrollView>
     <View>
       <Text style={styles.name} > 
         {result.name}
@@ -38,6 +39,8 @@ export default function ResultsShowScreen({route}) {
       }
       }/> 
     </View>
+    </ScrollView>
+
   )
 }
 
