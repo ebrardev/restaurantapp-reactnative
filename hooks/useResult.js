@@ -9,13 +9,13 @@ export default () => {
             params: {
                 limit: 50,
                 term: searchTerm,
-                location: 'Mersin',
+                location: 'Istanbul',
             }
         })
         setResults(response.data.businesses);
     }
     useEffect(() => {
-        searchApi('pasta');
+        searchApi('kebap');
     }, []);
  return [searchApi, results];
 };
